@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/blogs" method="POST">
+      <label for="title" style="color:rgb(255, 251, 0);"><b>Blog title:</b></label>
+      <input type="text" id="title" name="title" required>
+      <label for="snippet"style="color:rgb(255, 251, 0);"><b>Blog snippet:</b></label>
+      <input type="text" id="snippet" name="snippet" required>
+      <label for="body"style="color:rgb(255, 251, 0);"><b>Blog body:</b></label>
+      <textarea id="body" name="body" required></textarea>
+      <button><b>Submit</b></button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
